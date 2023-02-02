@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">fitnessKit_test</string>
+    <string name="app_name">FitnessKit</string>
+    <string name="bottom_menu_lessons">Занятия</string>
+    <string name="bottom_menu_request">Заявки</string>
+    <string name="bottom_menu_add_button">Добавить</string>
+    <string name="bottom_menu_chat">Чат</string>
+    <string name="bottom_menu_more">Еще</string>
+    <string name="timeTable">Расписание</string>
+    <string name="time_start">Начало</string>
+    <string name="time_stop">Окончание</string>
+    <string name="name_training">Тренировка</string>
+    <string name="name_trainer">ФИО тренера</string>
+    <string name="training_place">Место тренировки</string>
 </resources>

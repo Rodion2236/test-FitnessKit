@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_lessons"
+        android:icon="@drawable/calendar"
+        android:title="@string/bottom_menu_lessons" />
+
+    <item
+        android:id="@+id/navigation_tasks"
+        android:icon="@drawable/request"
+        android:title="@string/bottom_menu_request" />
+
+    <item
+        android:id="@+id/navigation_add"
+        android:icon="@drawable/plus_circle_add"
+        android:title="@string/bottom_menu_add_button" />
+
+    <item
+        android:id="@+id/navigation_chat"
+        android:icon="@drawable/chat"
+        android:title="@string/bottom_menu_chat" />
+
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/more_pict"
+        android:title="@string/bottom_menu_more" />
+</menu>
