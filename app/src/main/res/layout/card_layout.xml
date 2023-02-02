@@ -131,5 +131,16 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/location_pict" />
+
+        <TextView
+            android:id="@+id/time_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="@string/time_training"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/name_training"
+            app:layout_constraintTop_toTopOf="@+id/name_training"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
