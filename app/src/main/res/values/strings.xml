@@ -12,4 +12,5 @@
     <string name="name_trainer">ФИО тренера</string>
     <string name="training_place">Место тренировки</string>
     <string name="time_training">Время</string>
+    <string name="date">EEEE, dd MMMM</string>
 </resources>
