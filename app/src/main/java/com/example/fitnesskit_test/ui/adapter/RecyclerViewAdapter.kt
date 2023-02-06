@@ -6,7 +6,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesskit_test.R
 import com.example.fitnesskit_test.domain.lesson.InfoL
 import com.example.fitnesskit_test.ui.viewholders.ViewHolder
-import com.example.fitnesskit_test.util.getDateFormat
 
 class RecyclerViewAdapter: RecyclerView.Adapter<ViewHolder>() {
     //создаем адаптер для нашего списка тренировок
@@ -24,11 +23,11 @@ class RecyclerViewAdapter: RecyclerView.Adapter<ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val infoL = listInfoL[position]
-        holder.date_training.text = getDateFormat(infoL.date.toString())
+
+        holder.date_training.text =  infoL.date
 
         holder.left_color.setBackgroundColor(infoL.color.hashCode())
 
-        holder.name_trainer.text = infoL.full_name
         holder.name_training.text = infoL.name
         holder.place_training.text = infoL.place
 
@@ -37,13 +36,15 @@ class RecyclerViewAdapter: RecyclerView.Adapter<ViewHolder>() {
     }
 
     var listInfoL: List<InfoL> = mutableListOf()
-    set(value) {
-        field = value
-        notifyDataSetChanged()
-    }
+        set(value) {
+            field = value
+            notifyDataSetChanged()
+        }
     init {
         listInfoL.sortedWith(compareBy(String.CASE_INSENSITIVE_ORDER) {
             it.date.toString()
         })
     }
+
+
 }

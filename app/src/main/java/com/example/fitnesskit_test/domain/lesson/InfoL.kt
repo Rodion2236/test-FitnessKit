@@ -30,6 +30,6 @@ data class InfoL(
 
     @SerializedName("color")
     @Expose
-    val color: String? = null,
+    val color: String? = null
 //получаем данные по необходимым значениям
 )

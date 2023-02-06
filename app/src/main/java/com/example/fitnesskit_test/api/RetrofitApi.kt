@@ -4,7 +4,7 @@ import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-object ApiFactory {
+object RetrofitApi {
     private const val BASE_URL = "https://olimpia.fitnesskit-admin.ru/"
 
     private val retrofit = Retrofit.Builder()
@@ -13,7 +13,7 @@ object ApiFactory {
         .baseUrl(BASE_URL)
         .build()
 
-    val apiService: ApiSrevice = retrofit.create(ApiSrevice::class.java)
+    val apiService: RetrofitSrevice = retrofit.create(RetrofitSrevice::class.java)
     //подключаемся к url через retrofit
 }
 

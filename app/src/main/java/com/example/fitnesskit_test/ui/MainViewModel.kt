@@ -4,8 +4,7 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import com.example.fitnesskit_test.api.ApiFactory
+import com.example.fitnesskit_test.api.RetrofitApi
 import com.example.fitnesskit_test.domain.lesson.InfoL
 import com.example.fitnesskit_test.domain.trainers.InfoT
 import io.reactivex.android.schedulers.AndroidSchedulers
@@ -22,7 +21,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     val infoT: LiveData<List<InfoT>> = _infoT
 
     private fun loadDataLessons() {
-        val disposableL = ApiFactory.apiService.getDataLesson()
+        val disposableL = RetrofitApi.apiService.getDataLesson()
             .map { it.ListLesson }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -34,7 +33,7 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
     }
 
     private fun loadDataTrainers() {
-        val disposableT = ApiFactory.apiService.getDataTrainers()
+        val disposableT = RetrofitApi.apiService.getDataTrainers()
             .map { it.listTrainers }
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -48,7 +47,6 @@ class MainViewModel(application: Application): AndroidViewModel(application) {
         super.onCleared()
         compositeDisposable.clear()
     }
-
     init {
         loadDataLessons()
         loadDataTrainers()

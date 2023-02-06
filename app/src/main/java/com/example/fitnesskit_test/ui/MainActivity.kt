@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.RecyclerView
-import com.example.fitnesskit_test.R
 import com.example.fitnesskit_test.databinding.ActivityMainBinding
 import com.example.fitnesskit_test.ui.adapter.RecyclerViewAdapter
 
